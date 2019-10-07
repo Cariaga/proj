@@ -34,7 +34,7 @@ app.use(helmet.featurePolicy({
 }))
 
 app.get('/', function (req, res) {
-  res.send('Dockerized3');
+  res.send('Dockerized1');
 })
 
 var server = app.listen(8080, function () {
