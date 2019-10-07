@@ -1,14 +1,17 @@
 #this is the docker file for dockerizing nodejs
 FROM node:10
 ENV Npm_CONFIG_LOGLEVEL warn
-RUN  mkdir -p /usr/src/app
-EXPOSE 8080
+
+# Create app directory
+RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
-ADD package.json /usr/src/app/
+# Install app dependencies
+COPY package.json /usr/src/app/
+RUN npm install
 
-RUN npm install --production
+# Bundle app source
+COPY . /usr/src/app
 
-ADD . /usr/src/app/
-
-ENTRYPOINT ["npm", "start"]
+EXPOSE 8080
+CMD [ "npm", "start" ]
