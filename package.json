@@ -10,7 +10,9 @@
     "no-ip": "^1.0.2",
     "strict-transport-security": "^0.2.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "nodemon": "^1.19.3"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js"
