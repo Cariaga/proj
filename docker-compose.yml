@@ -11,4 +11,4 @@ services:
       PORT: 8080 # this is optional, allows express to use process.env.PORT instead of a raw 3000
     deploy:
       mode: replicated
-      replicas: 6
+      replicas: 1
