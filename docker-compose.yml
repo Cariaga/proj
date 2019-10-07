@@ -1,6 +1,6 @@
 web:
   build: .
-  command: npm start
+  command: node app.js
   volumes:
     - .:/usr/src/app
   ports:
