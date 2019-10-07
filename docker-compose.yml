@@ -5,7 +5,5 @@ web:
     - .:/usr/src/app
   ports:
     - "8080:8080"
-  links:
-    - db
   environment:
     PORT: 8080 # this is optional, allows express to use process.env.PORT instead of a raw 3000
