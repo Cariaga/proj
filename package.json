@@ -15,5 +15,5 @@
     "start": "node app.js"
   },
   "author": "Kaivaan",
-  "license": "ISC"
+  "license": "MIT"
 }
