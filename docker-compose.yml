@@ -21,3 +21,4 @@ services:
         condition: on-failure
 networks:
     someApp:
+     driver: overlay
