@@ -5,10 +5,13 @@ services:
     command: npm start
     networks:
       - someApp
+    ports:
+      - "8080:80"
     volumes:
       - .:/usr/src/app
     deploy:
       replicas: 2
+      
       resources:
         limits:
           cpus: "0.1"
