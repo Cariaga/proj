@@ -9,7 +9,7 @@ services:
     volumes:
       - .:/usr/src/app
     ports:
-      - "8080:8080"
+      - "8082:8082"
     deploy:
       replicas: 2
       resources:
@@ -29,7 +29,7 @@ services:
     volumes:
       - .:/usr/src/app
     ports:
-      - "8080:8081"
+      - "8080:8080"
     deploy:
       replicas: 2
       resources:
