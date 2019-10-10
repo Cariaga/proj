@@ -7,8 +7,6 @@ services:
       - someApp
     volumes:
       - .:/usr/src/app
-    ports:
-       - "8080:8090"
     deploy:
       replicas: 2
       resources:
