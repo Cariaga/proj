@@ -37,7 +37,7 @@ app.get('/', function (req, res) {
   res.send('Dockerized1');
 })
 
-var server = app.listen(0, function () {
+var server = app.listen(8080, function () {
   var host = server.address().address
   var port = server.address().port
   
