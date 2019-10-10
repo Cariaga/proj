@@ -18,7 +18,5 @@ services:
         condition: on-failure
     networks:
       - webnet
-
 networks:
   webnet:
-    driver: overlay
