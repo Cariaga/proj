@@ -9,9 +9,9 @@ WORKDIR /usr/src/app
 
 # Install app dependencies
 COPY package.json /usr/src/app/
-RUN npm install
+RUN npm install --only=production
 
 # Bundle app source
 COPY . /usr/src/app
 
-EXPOSE 8080
+EXPOSE 7995-8080
