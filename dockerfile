@@ -14,4 +14,4 @@ RUN npm install --only=production
 # Bundle app source
 COPY . /usr/src/app
 
-EXPOSE 7995-8090
+EXPOSE 8080
