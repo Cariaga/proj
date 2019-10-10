@@ -6,7 +6,27 @@ services:
     networks:
       - someApp
     ports:
-      - "8080:80"
+      - "8081:8080"
+    volumes:
+      - .:/usr/src/app
+    deploy:
+      replicas: 2
+      
+      resources:
+        limits:
+          cpus: "0.1"
+          memory: '50M'
+      restart_policy:
+        condition: on-failure
+    networks:
+      - webnet
+  web:
+    build: .
+    command: npm start
+    networks:
+      - someApp
+    ports:
+      - "8082:8080"
     volumes:
       - .:/usr/src/app
     deploy:
